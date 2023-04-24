@@ -6,8 +6,8 @@ public class Playlist {
     private String title;
 
     public Playlist(){
-
     }
+
 
     public Playlist(String title){
         this.title = title;

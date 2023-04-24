@@ -8,7 +8,6 @@ public class Album {
     private Date releaseDate;
 
     public Album(){
-
     }
 
     public Album(String title){

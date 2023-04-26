@@ -71,7 +71,7 @@ public class SpotifyRepository {
         albumList.add(album);
 
         List<Song> songList = new ArrayList<>();
-        albumSongMap.put(album,songs);
+        albumSongMap.put(album,songList);
         artistAlbumMap.put(artist,albumList);
 
         return album;
@@ -100,6 +100,8 @@ public class SpotifyRepository {
         songLikeMap.put(song,likedUsers);
 
         albumSongMap.put(album,songList);
+
+        songs.add(song);
 
         return song;
     }

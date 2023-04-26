@@ -19,7 +19,7 @@ public class SpotifyService {
         return spotifyRepository.createArtist(name);
     }
 
-    public Album createAlbum(String title, String artistName) throws Exception {
+    public Album createAlbum(String title, String artistName){
         return spotifyRepository.createAlbum(title,artistName);
     }
 

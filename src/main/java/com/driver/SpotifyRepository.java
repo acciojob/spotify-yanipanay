@@ -56,7 +56,7 @@ public class SpotifyRepository {
         return artist;
     }
 
-    public Album createAlbum(String title, String artistName) throws Exception {
+    public Album createAlbum(String title, String artistName) {
         Album album = new Album(title);
         Artist artist=null;
 
@@ -91,7 +91,7 @@ public class SpotifyRepository {
             }
         }
 
-        if(album==null) throw new Exception("Album does not exist");
+        if(album==null) throw new AlbumException("Album does not exist");
 
         List<Song> songList = albumSongMap.get(album);
         songList.add(song);

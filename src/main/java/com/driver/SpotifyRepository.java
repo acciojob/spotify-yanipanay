@@ -66,12 +66,13 @@ public class SpotifyRepository {
                 break;
         }
         if (artist==null) artist = createArtist(artistName);
-        List<Album> albums  = artistAlbumMap.get(artist);
+        List<Album> albumList  = artistAlbumMap.get(artist);
         albums.add(album);
+        albumList.add(album);
 
         List<Song> songList = new ArrayList<>();
         albumSongMap.put(album,songs);
-        artistAlbumMap.put(artist,albums);
+        artistAlbumMap.put(artist,albumList);
 
         return album;
     }
@@ -81,7 +82,9 @@ public class SpotifyRepository {
 
         Album album = null;
 
+        System.out.println(albums.size());
         for(Album album1:albums){
+
             if(album1.getTitle().equals(albumName)) {
                 album = album1;
                 break;

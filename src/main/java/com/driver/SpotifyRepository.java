@@ -53,6 +53,7 @@ public class SpotifyRepository {
         Artist artist = new Artist(name);
         List<Album> albums = new ArrayList<>();
         artistAlbumMap.put(artist,albums);
+        artists.add(artist);
         return artist;
     }
 

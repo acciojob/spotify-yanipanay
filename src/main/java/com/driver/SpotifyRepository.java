@@ -186,14 +186,15 @@ public class SpotifyRepository {
 
         if(creatorPlaylistMap.get(user).equals(playlist)) return playlist;
         else{
-            List<Playlist> userPL = userPlaylistMap.get(user);
-            userPL.add(playlist);
-
             List<User> listeners =playlistListenerMap.get(playlist);
             if(listeners.contains(user)) return playlist;
             else {
                 listeners.add(user);
                 playlistListenerMap.put(playlist,listeners);
+
+                List<Playlist> userPL = userPlaylistMap.get(user);
+                userPL.add(playlist);
+
                 return playlist;
             }
         }

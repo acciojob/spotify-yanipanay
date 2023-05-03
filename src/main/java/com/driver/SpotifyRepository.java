@@ -131,6 +131,7 @@ public class SpotifyRepository {
 
         List<Playlist> userPlaylists = userPlaylistMap.get(user);
         userPlaylists.add(playlist);
+        userPlaylistMap.put(user,userPlaylists);
         playlists.add(playlist);
 
         return playlist;
@@ -160,6 +161,7 @@ public class SpotifyRepository {
 
         List<Playlist> userPlaylists = userPlaylistMap.get(user);
         userPlaylists.add(playlist);
+        userPlaylistMap.put(user,userPlaylists);
         playlists.add(playlist);
 
         return playlist;
